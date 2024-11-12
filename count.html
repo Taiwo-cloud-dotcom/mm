@@ -10,15 +10,26 @@
 
     <style>
         .ade {
-            margin: 20px;
-            padding: 15px
+            display: flex;
+            justify-content: center;
+
         }
 
-        button {
-            border-radius: 10%;
+        span {
+            font-size: 100px;
+            border-radius: 15%;
             margin: 5px;
             color: green;
-            background-color: yellow;
+            background-color: red;
+        }
+
+        .olu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+    
+            font-size: large;
         }
     </style>
 </head>
@@ -56,14 +67,22 @@
     </nav>
 
     <div class="ade">
-        <button onclick="lazz()">TIME COUNT</button>
         <P id="counting"></P>
-        <button id="wa">0</button>
-        <button id="odu">0</button>
-        <button id="uni">0</button>
-    </div>
+        <span id="wa">00</span>
 
-    <pre style="background: black; color: whitesmoke;"><code></code>
+        <span id="odu">00</span>
+
+        <span id="uni">00</span>
+        <br>
+
+    </div>
+    <div class="olu">
+        <button id="color: red;background-color: green;" onclick="lazz()">START</button>
+        <br><br>
+        <button id="stopco"style="color: re'd; background-color: green;"onclick="tapp()">STOP</button>
+    </div>
+    <pre
+        style="background: black; color: whitesmoke; display: flex; justify-content: center; width: auto; background-size: auto;"><code></code>
         let myTimeInSec = 7200
 
         let countdownDisplay = document.getElementById("counting")
