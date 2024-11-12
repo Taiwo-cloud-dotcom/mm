@@ -6,8 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    
 
+
+    <style>
+        .ade {
+            margin: 20px;
+            padding: 15px
+        }
+
+        button {
+            border-radius: 10%;
+            margin: 5px;
+            color: green;
+            background-color: yellow;
+        }
+    </style>
 </head>
 
 <body>
@@ -42,7 +55,7 @@
         </div>
     </nav>
 
-    <div>
+    <div class="ade">
         <button onclick="lazz()">TIME COUNT</button>
         <P id="counting"></P>
         <button id="wa">0</button>
@@ -50,6 +63,36 @@
         <button id="uni">0</button>
     </div>
 
+    <pre style="background: black; color: whitesmoke;"><code></code>
+        let myTimeInSec = 7200
+
+        let countdownDisplay = document.getElementById("counting")
+        
+        function counting() {
+            myTimeInSec -= 1;
+            hrs = Math.floor(myTimeInSec / (60 * 60));
+            mins = Math.floor((myTimeInSec % (60 * 60)) / 60);
+            sec = Math.floor(myTimeInSec % 60);
+        
+        
+        
+            let mywa = document.getElementById('wa')
+            let myodu = document.getElementById('odu')
+            let myuni = document.getElementById('uni')
+        
+            mywa.innerText = hrs;
+            myodu.innerText = mins;
+            myuni.innerText = sec;
+        
+        }
+        
+        function lazz() {
+            setInterval(() => {
+                counting()
+        
+            }, 1000);
+        }
+    </code></pre>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="count.js "></script>
 </body>
