@@ -26,6 +26,8 @@ function counting() {
 }
 
 function lazz() {
+
+
     let countdownDisplay = setInterval(() => {
         counting()
 
